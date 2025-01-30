@@ -25,25 +25,13 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.3/dist/iconify-icon.min.js"></script>
 
     <!-- Remove this and fill in your name & photo in the required areas -->
-    <script>
-      fetch('https://randomuser.me/api/?inc=name,picture')
-        .then((response) => response.json())
-        .then(({ results }) => results[0])
-        .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
-          document.querySelector(
-            '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
-        })
-    </script>
+
 
     <link href="styles/theme.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
 
     <!-- Set Page Title Here -->
-    <title></title>
+    <title>Cory Cox</title>
   </head>
 
   <body>
@@ -78,6 +66,12 @@
               >
             </li>
             <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#interests"
+                >Interests</a
+              >
+            </li>
+            
+            <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#contact"
                 >Contact</a
               >
@@ -94,17 +88,20 @@
         class="rounded-circle border border-3 border-primary p-1 mb-3 mt-0 mt-lg-5"
       >
       <!-- Set Photo Here -->
-        <img
-          style="height: 150px; width: 150px"
-          class="rounded-circle"
-          draggable="false"
-          id="profilepic"
-        />
+      <img 
+      style="height: 150px; width: 150px"
+      class="rounded-circle"
+      draggable="false"
+      id="profilepic"
+      src="images/pfp.jpg" 
+      alt="Profile Picture"
+  />
+  
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
           <!-- Set Name Here -->
-          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm
+          Hi <iconify-icon icon="twemoji:waving-hand"></iconify-icon> I'm Cory Cox
           <span id="name"></span>!
         </h4>
       </div>
@@ -122,22 +119,16 @@
             title="Python"
           />
         </div>
+        <!--added HTML and removed languaged that are unknown-->
         <div class="col text-center">
           <img
-            src="images/angular.jpg"
+            src="images/html.jpg"
             data-bs-toggle="tooltip"
             data-placement="top"
-            title="Angular"
+            title="HTML"
           />
         </div>
-        <div class="col text-center">
-          <img
-            src="images/typescript.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="TypeScript"
-          />
-        </div>
+
 
         <div class="col text-center">
           <img
@@ -180,14 +171,7 @@
             title="Microsoft SQL Server"
           />
         </div>
-        <div class="col text-center">
-          <img
-            src="images/mongodb.jpg"
-            data-bs-toggle="tooltip"
-            data-placement="top"
-            title="MongoDB"
-          />
-        </div>
+
       </div>
 
       <div class="row mt-3 mt-lg-5 next">
@@ -204,55 +188,22 @@
       id="projects"
     >
       <div class="row mx-auto">
-        <h4 class="h1 font-weight-bold mx-auto text-center">Projects</h4>
+        <h4 class="h1 font-weight-bold mx-auto text-center">Projects:</h4>
       </div>
       <div class="row mx-auto">
         <h5 class="h5 mx-auto text-opacity-75 text-primary text-center mb-4">
-          I've worked on some neat things.
+          Some projects that I've worked on:
         </h5>
       </div>
       <div class="row w-100">
-        <h5>Inspiro for Esperanza</h5>
+        <h5>Weather Application</h5>
       </div>
       <div class="row w-100 mb-4">
         <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus
-          nisi in neque blandit auctor. Vestibulum pellentesque fringilla nulla
-          quis sagittis. Donec id erat sodales, fringilla est non, vestibulum
-          tellus. Suspendisse potenti. Fusce et dolor blandit, tincidunt eros
-          non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus
-          tincidunt purus. Suspendisse imperdiet massa nec sem dictum luctus.
-          Vestibulum at porta lectus, sed faucibus libero.
+          Helped create a website that allows users to search for their city/town through an API(OpenWeatherMap). This then displays the temperature, desciptiption of the weather as well as the windspeed. It can even be taken further with the press of a button that shows the user the air quality details!
         </p>
       </div>
-      <div class="row w-100">
-        <h5>Work From Home Pinterest</h5>
-      </div>
-      <div class="row w-100 mb-4">
-        <p class="text-justify">
-          Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non
-          ex dapibus finibus. Nulla facilisi. Integer eu libero lorem.
-          Pellentesque eget pretium ligula. Donec finibus nibh sed leo dapibus
-          imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit
-          dolor, ac mollis risus. Vestibulum commodo turpis nulla, bibendum
-          varius urna dictum porta.
-        </p>
-      </div>
-      <div class="row w-100">
-        <h5>Query Dating Site</h5>
-      </div>
-      <div class="row w-100">
-        <p class="text-justify">
-          Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra
-          odio ut egestas. Nullam facilisis condimentum consequat. Integer arcu
-          nibh, ullamcorper non fringilla quis, tempus sit amet turpis. Proin ac
-          gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor
-          sit amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a
-          maximus vel, fringilla eu nisl. Pellentesque sed quam non urna dapibus
-          porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-          efficitur at.
-        </p>
-      </div>
+
       <div class="row mt-3 next">
         <a href="#courses" class="col"
           ><iconify-icon
@@ -331,6 +282,33 @@
             ></iconify-icon
           ></a>
         </div>
+      </div>
+    </div>
+    <!--container bootstrap grid system keeping the content centered and responsive-->
+    <!--- also added typography components for my heading stdyle and fs-5 for the size increase-->
+    <!--threw in poppins font for this section-->
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center" id="interests">
+      <div class="w-75 bg-primary text-white text-center p-5 rounded shadow-lg" style="font-family: 'Poppins', sans-serif;">
+          <h4 class="h1 fw-bold mb-4">Interests</h4>
+          <div class="row justify-content-center">
+              <div class="col-md-8">
+                  <p class="fs-5">🎮 Video Games</p>
+                  <p class="fs-5">📖 Reading</p>
+                  <p class="fs-5">✍️ Writing</p>
+                  <p class="fs-5">🎵 Music</p>
+                  <p class="fs-5">🏋️ Exercise</p>
+                  <p class="fs-5">🍳 Cooking</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+          </p>
+        </div>
+      </div>
+
+
       </div>
     </div>
     <div
